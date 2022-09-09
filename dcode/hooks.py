@@ -15,8 +15,11 @@ app_license = "MIT"
 # app_include_js = "/assets/dcode/js/dcode.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/dcode/css/dcode.css"
-# web_include_js = "/assets/dcode/js/dcode.js"
+# web_include_css = ["/assets/dcode/css/animate.css","/assets/dcode/css/slick.css",
+#                 "/assets/dcode/css/materialdesignicons.min.css",
+#                 "/assets/dcode/css/style.css","/assets/dcode/css/line-awesome.min.css",
+#                 "/assets/dcode/css/fontawesome.min.css","/assets/dcode/css/default-color.css"]
+#web_include_js = ["/assets/dcode/js/dcode.js","/assets/dcode/js/appear.js"]
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "dcode/public/scss/website"

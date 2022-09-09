@@ -1,0 +1,65 @@
+{%- macro card(image,image_hover, title, description) -%}
+
+<div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="features-block theme-one wow fadeInUp">
+        <div class="inner-box">
+            <div class="icon">
+                <img class="normal" src="{{image}}" alt="">
+                <img class="hover" src="{{image_hover}}" alt="">
+            </div>
+            <div class="text">
+                <h4>{{title}}</h4>    
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </div>
+</div><!-- End Col -->
+
+
+
+{%- endmacro -%}
+
+<div class="features-section section-padding">
+    <div class="container">
+        <div class="row clearfix align-items-center justify-content-between">
+             <div class="col-lg-5">
+                <div class="heading-wrapper with-separator">
+                    <h2 class="h1">{{title}}</h2>
+                </div>
+                <!-- End Heading -->
+                <div class="text-wrapper">
+                    <p class="lead-text">{{description_1}}</p>
+                    <p>{{description_2}}</p>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{action_button_url}}" class="btn btn-primary">{{action_button_text}}</a>
+                </div>
+                <div class="d-lg-none d-xl-block empty-space-30"></div>
+            </div><!-- End Col -->
+            <div class="col-lg-6">
+                <div class="row inner-row clearfix">
+
+                    {%- for index in  range(4) -%}
+                    {%- set image = values['card_' + index|string + '_image'] -%}
+                    {%- set image_hover = values['card_' + index|string + '_image_hover'] -%}
+                    {%- set subtitle = values['card_' + index|string + '_subtitle'] -%}
+                    {%- set title = values['card_' + index|string + '_title'] -%}
+                    {%- set description = values['card_' + index|string + '_description'] -%}
+
+                    
+                    {{ card(image,image_hover, title, description) }}
+
+                    {%- endfor -%}   
+
+
+
+                    
+
+
+                </div><!-- End Row -->
+            </div>
+            <!-- End Col -->
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- Features Section -->

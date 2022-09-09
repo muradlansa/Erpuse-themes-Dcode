@@ -1,0 +1,66 @@
+{%- macro pricing(plan_name,plan_cost,plan_validity,plan_description,plan_features,button_label,button_action,is_featured) -%}
+
+
+<div class="col-lg-4 col-12">
+    <div class="price-card text-center wow fadeInLeft">
+        <div class="plan-cost-wrapper">
+            <div class="plan-cost">
+                <span class="plan-cost-prefix">{{plan_cost}}
+            </div>
+            <div class="plan-validity">{{plan_validity}}</div>
+        </div>
+        <div class="card-header">
+            <h3 class="card-title">{{plan_name}}</h3>
+        </div>
+        <div class="card-body">
+            <div class="desc">
+                <p>{{plan_description}}</p>
+            </div>
+            <ul class="pricing-feature-list">
+                    {{plan_features}}
+            </ul>
+            <a href="#" class="btn btn-secondary">{{button_label}}</a>
+        </div>
+    </div><!-- End Price card -->
+</div><!-- End Col -->
+
+
+{%- endmacro -%}
+
+
+
+<div class="pricing-section section-padding">
+    <div class="container">
+        <div class="row justify-content-center clearfix">
+            <div class="col-lg-8">
+                <div class="heading-wrapper text-center with-separator">
+                    <h2 class="h1">{{title}}</h2>
+                    <div class="lead-text">
+                        <p>{{description}}</p>
+                    </div>
+                </div><!-- End Heading -->
+            </div><!-- End Col -->
+        </div><!-- End Row -->
+        <div class="row pricing-plans-two clearfix">
+
+            {%- for index in  range(6) -%}
+            {%- set plan_name = values['plan_name_' + index|string] -%}
+            {%- set plan_cost = values['plan_cost_' + index|string] -%}
+            {%- set plan_validity = values['plan_validity_' + index|string] -%}
+            {%- set plan_description = values['plan_description_' + index|string] -%}
+            {%- set plan_features = values['plan_features_' + index|string] -%}
+            {%- set button_label = values['button_label_' + index|string] -%}
+            {%- set button_action = values['button_action_' + index|string] -%}
+            {%- set is_featured = values['is_featured_' + index|string] -%}
+
+            {%- if plan_name -%}
+            {{  pricing(plan_name,plan_cost,plan_validity,plan_description,plan_features,button_label,button_action,is_featured) }}
+            {%- endif -%}
+
+            {%- endfor -%}   
+
+
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- Pricing Section -->

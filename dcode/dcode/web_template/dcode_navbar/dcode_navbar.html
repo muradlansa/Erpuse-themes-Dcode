@@ -1,0 +1,35 @@
+            <!-- Nav Bar -->
+            <header id="master-head" class="navbar menu-center">
+                <div class="container-fluid">
+                    <div id="main-logo" class="logo-container">
+                        <a class="logo" href="/home">
+                            <img src="/assets/dcode/images/erpuse-logo.png" class="logo-dark" alt="DCode">
+                            <img src="/assets/dcode/images/erpuse-logo.png" class="logo-light" alt="DCode">
+                        </a>
+                    </div>
+                    <div class="menu-toggle-btn">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle">
+                            <div class="burger-lines">
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                    <div id="navigation" class="nav navbar-nav navbar-main">
+							{% include "templates/includes/navbar/navbar_items.html" %}                     
+                    </div>
+                    <div class="navbar-right">
+                        <div class="menu-button">
+                            <a href="/login">
+                                <div class="btn btn-primary">Log In</div>
+                            </a>
+                        </div>
+                        <div class="search-option">
+                            <div class="search-btn">
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Nav Bar -->

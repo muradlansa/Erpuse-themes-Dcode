@@ -1,0 +1,58 @@
+{%- macro testimonial(comment,author,designation) -%}
+<div class="item">
+    <div class="testimonial-text">
+        <blockquote>
+            {{comment}}
+        </blockquote>
+        <div class="client-info">
+            <h5>{{author}}</h5>
+            <p>{{designation}}</p>
+        </div>
+    </div>
+</div>
+
+{%- endmacro -%}
+
+
+
+
+
+<div class="testimonial-section style-two section-padding">
+    <div class="container">
+        <div class="row clearfix style-dark">
+            <div class="col-lg-8">
+                <div class="heading-wrapper">
+                    <h2 class="h1">{{title}}</h2>
+                    <div class="lead-text">
+                        <p>{{description}}</p>
+                    </div>
+                </div><!-- End Heading -->
+            </div><!-- End Col -->
+        </div><!-- End Row -->
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="client-testimonial theme-two">
+                    <div class="testimonial-slider">
+
+
+                        {%- for index in  range(6) -%}
+                        {%- set comment = values['comment_' + index|string] -%}
+                        {%- set author = values['author_' + index|string] -%}
+                        {%- set designation = values['designation_' + index|string] -%}
+            
+                        {%- if comment -%}
+                        {{ testimonial(comment,author,designation) }}
+                        {%- endif -%}
+            
+                        {%- endfor -%}   
+
+
+
+
+                     </div><!-- End Testimonial Slider -->
+                </div>
+            </div><!-- End Col -->
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- Testimonial Section -->

@@ -1,0 +1,23 @@
+{
+ "__unsaved": 1,
+ "creation": "2022-09-09 16:07:39.282929",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2022-09-09 23:42:13.362997",
+ "modified_by": "Administrator",
+ "module": "Dcode",
+ "name": "Dcode Navbar",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Navbar"
+}

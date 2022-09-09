@@ -1,0 +1,94 @@
+{
+ "__unsaved": 1,
+ "creation": "2022-09-09 20:14:54.089630",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__unsaved": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "comment_0",
+   "fieldtype": "Data",
+   "label": "Comment",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "author_0",
+   "fieldtype": "Data",
+   "label": "Author",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "designation_0",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "comment_1",
+   "fieldtype": "Data",
+   "label": "Comment",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "author_1",
+   "fieldtype": "Data",
+   "label": "Author",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "designation_1",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "comment_2",
+   "fieldtype": "Data",
+   "label": "Comment",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "author_2",
+   "fieldtype": "Data",
+   "label": "Author",
+   "reqd": 0
+  },
+  {
+   "__unsaved": 1,
+   "fieldname": "designation_2",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2022-09-10 02:14:46.393016",
+ "modified_by": "Administrator",
+ "module": "Dcode",
+ "name": "DCode Testimonials Section 1",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Component"
+}

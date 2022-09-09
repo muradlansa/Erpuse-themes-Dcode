@@ -1,0 +1,38 @@
+{% extends "templates/web.html" %}
+
+{%- block title -%}{{_("Not Found")}}{%- endblock -%}
+
+{% block page_content %}
+
+<script>
+	window.is_404 = true;
+</script>
+
+
+
+<div class="page-header section-padding full-height dc-404">
+	<div class="container">
+		<div class="row clearfix justify-content-center">
+			<div class="col-lg-8 text-center">
+				<div class="heading-wrapper wow fadeInUp" data-wow-delay="0.2s">
+					<h1>{{ _("Oopps") }}, <span>{{ _("There's nothing here") }}..</span></h1>
+					<div class="lead-text">
+						<p>{{ _("The page you are looking for has gone missing.") }}</p>
+					</div>
+				</div>
+				<div class="image-wrapper">
+					<img src="assets/dcode/images/default-color/page-not-found-img.png" alt="" />
+				</div>
+				<div class="empty-space-60"></div>
+				<div class="btn-wrapper wow fadeInRight" data-wow-delay="0.5s">
+					<a class="btn btn-primary" href="/">{{ _("Back to Home") }}</a>
+				</div>
+			</div><!-- End Col -->
+		</div><!-- End Row -->
+	</div>
+</div>
+
+
+
+
+{% endblock %}

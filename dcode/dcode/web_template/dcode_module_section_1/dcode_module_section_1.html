@@ -1,0 +1,46 @@
+{%- macro module(image,title) -%}
+
+<div class="col-lg-2 col-md-4 col-sm-6">
+    <div class="features-block theme-three wow fadeInUp">
+        <div class="inner-box">
+            <div class="icon">
+                <img class="normal" src="{{image}}" alt="">
+            </div>
+            <div class="text">
+                <h4>{{title}}</h4>    
+            </div>
+        </div>
+    </div>
+</div><!-- End Col -->
+
+{%- endmacro -%}
+
+<div class="module-section section-padding">
+    <div class="container">
+        <div class="row clearfix justify-content-center">
+            <div class="col-lg-8">
+                <div class="heading-wrapper with-separator text-center">
+                    <h2 class="h1">{{ title }}</h2>
+                    <div class="lead-text">
+                        <p>{{ description }}</p>
+                    </div>
+                </div>
+                <!-- End Heading -->
+            </div><!-- End Col -->
+        </div><!-- End Row -->
+        <div class="row clearfix">
+
+            {%- for index in  range(12) -%}
+            {%- set image = values['image_' + index|string] -%}
+            {%- set title = values['title_' + index|string] -%}
+
+
+            {%- if image -%}
+            {{ module(image,title) }}
+            {%- endif -%}
+
+            {%- endfor -%}   
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- Module Section -->

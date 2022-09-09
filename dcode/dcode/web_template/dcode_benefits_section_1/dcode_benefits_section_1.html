@@ -1,0 +1,48 @@
+{%- macro benefits(title,description) -%}
+
+<div class="col-lg-4 col-md-6">
+    <div class="features-block theme-two wow fadeInUp">
+        <div class="inner-box">
+            <div class="text">
+                <h4>{{title}}</h4>
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </div>
+</div><!-- End Col -->
+
+{%- endmacro -%}
+
+
+
+<div class="benefits-section section-padding style-dark dark-bg gradient-heading-bg">
+    <div class="container">
+        <div class="row clearfix justify-content-center">
+            <div class="col-lg-8">
+                <div class="heading-wrapper text-center">
+                    <h2 class="h1">{{title}}</h2>
+                    <div class="lead-text">
+                        <p>{{description}}</p>
+                    </div>
+                </div><!-- End Heading -->
+                <div class="empty-space-60 clearfix"></div>
+            </div><!-- End Col -->
+        </div><!-- End Row -->
+        <div class="row clearfix">
+
+            {%- for index in ['1', '2', '3', '4', '5', '6'] -%}
+
+            {%- set title = values['title_' + index] -%}
+            {%- set description = values['description_' + index] -%}
+
+
+            {%- if title -%}  
+            {{ benefits(title,description) }}
+            {%- endif -%}
+
+
+            {%- endfor -%}   
+        </div><!-- End Row -->
+    </div>
+</div>
+<!-- Benefits Section -->
