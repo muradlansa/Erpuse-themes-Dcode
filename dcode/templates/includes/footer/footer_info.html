@@ -1,0 +1,24 @@
+
+
+
+<div class="copyright-bar style-dark">
+	<div class="copyright-text text-center">
+		{% if copyright %}
+		&copy; {{ copyright }}
+		{% endif %}
+		{% if footer_address %}
+		{% if copyright %}<br>{% endif %}
+		{{ footer_address }}
+		{% endif %}
+
+		{% block powered %}
+		{%- if footer_powered -%}
+			{{ footer_powered }}
+		{%- else -%}
+			{% include "templates/includes/footer/footer_powered.html" %}
+		{%- endif -%}
+		{% endblock %}
+
+		
+	</div>
+</div>

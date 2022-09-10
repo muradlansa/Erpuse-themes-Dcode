@@ -1,0 +1,72 @@
+{% macro render_item(item, submenu=False, parent=False) %}
+{% if item.child_items %}
+
+{% if parent %}
+
+{%- set dropdown_id = 'id-' + frappe.utils.generate_hash('Dropdown', 12) -%}
+<li class="menu-item dropdown {% if submenu %} menu-item-has-children {% endif %}">
+	<a class="nav-link dropdown-toggle" href="#" id="{{ dropdown_id }}" role="button"
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		{{ _(item.label) }}
+	</a>
+  	<ul class="sub-menu" aria-labelledby="{{ dropdown_id }}">
+		{% for child in item.child_items %}
+			{{ render_item(child, True) }}
+	  {% endfor %}
+	</ul>
+</li>
+{% else %}
+{%- set dropdown_id = 'id-' + frappe.utils.generate_hash('Dropdown', 12) -%}
+<li class="menu-item dropdown {% if submenu %} menu-item-has-children {% endif %}">
+	<a href="#" id="{{ dropdown_id }}" role="button"
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		{{ _(item.label) }}
+	</a>
+	<ul class="sub-menu" aria-labelledby="{{ dropdown_id }}">
+		{% for child in item.child_items %}
+			{{ render_item(child, True) }}
+	{% endfor %}
+	</ul>
+</li>
+{% endif %}
+
+{% else %}
+
+{% set url = item.url or '' %}
+{% set url = url if url.startswith('#') else url | abs_url %}
+
+{% if parent %}
+<li class="menu-item">
+	<a  href="{{ url }}"
+		{% if item.open_in_new_tab %} target="_blank" {% endif %}>
+		{{ _(item.label) }}
+	</a>
+</li>
+{% else %}
+<a class="menu-item" href="{{ url }}"
+	{% if item.open_in_new_tab %} target="_blank" {% endif %}>
+	{{ _(item.label) }}
+</a>
+{% endif %}
+
+{% endif %}
+{% endmacro %}
+
+
+{% if top_bar_items -%}
+
+
+<ul id="main-menu" class="menu-primary">
+	{%- for item in top_bar_items -%}
+		{% if not item.parent_label and not item.right -%}
+			{{ render_item(item, parent=True) }}
+		{%- endif -%}
+	
+	
+	{%- endfor %}
+</ul>
+{%- endif %}
+
+
+
+
