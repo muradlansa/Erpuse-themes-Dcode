@@ -7,6 +7,10 @@ app_description = "Theme"
 app_email = "mail@muradlansa.com"
 app_license = "MIT"
 
+
+base_template = "dcode/templates/base.html"
+
+
 # Includes in <head>
 # ------------------
 

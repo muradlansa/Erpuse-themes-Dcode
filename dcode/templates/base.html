@@ -83,21 +83,8 @@
             </div>
             <!-- Loader -->
             <!-- Nav Bar -->
-			{%- block navbar -%}
-			{{ web_block(
-				navbar_template or 'Standard Navbar',
-				values=_context_dict,
-				add_container=0,
-				add_top_padding=0,
-				add_bottom_padding=0,
-			) }}
-		{%- endblock -%}
+            {% include "dcode/templates/includes/navbar/navbar.html" %}
 
-
-
-
-        
-         
 
                     {% block content %}
                     {{ content }}

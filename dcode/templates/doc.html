@@ -6,11 +6,14 @@
 {% endblock -%}
 
 {%- block navbar -%}
+
+
 <nav class="navbar navbar-light navbar-expand-lg doc-navbar fixed-top">
 	<div class="container-fluid doc-container">
 		<div class="row no-gutters w-100">
 			<div class="col-12 col-lg-2">
 				<a class="navbar-brand" href="{{ url_prefix }}{{ home_page or "/" }}">
+
 					{%- if brand_html -%}
 					{{ brand_html }}
 					{%- elif banner_image -%}
